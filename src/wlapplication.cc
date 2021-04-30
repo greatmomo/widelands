@@ -798,6 +798,7 @@ bool WLApplication::handle_key(bool down, const SDL_Keycode& keycode, const int 
 					continue;
 				}
 				g_gr->screenshot(filename);
+                // This is where a notification of a saved screenshot should be called
 				return true;
 			}
 			log_warn("Omitting screenshot because 10000 screenshots are already present");
