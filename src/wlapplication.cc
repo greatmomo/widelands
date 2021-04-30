@@ -799,7 +799,8 @@ bool WLApplication::handle_key(bool down, const SDL_Keycode& keycode, const int 
 				}
 				g_gr->screenshot(filename);
                 // @Momo: This is where a notification of a saved screenshot should be called
-				return true;
+                igbase().log_message(_("Screenshot saved"));
+                return true;
 			}
 			log_warn("Omitting screenshot because 10000 screenshots are already present");
 		}
