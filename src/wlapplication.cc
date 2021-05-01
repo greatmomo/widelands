@@ -82,6 +82,11 @@
 #include "wlapplication_options.h"
 #include "wui/interactive_player.h"
 #include "wui/interactive_spectator.h"
+#include "wui/interactive_gamebase.h"
+
+InteractiveGameBase& WLApplication::igbase() {
+    return dynamic_cast<InteractiveGameBase&>(*get_parent());
+}
 
 namespace {
 
