@@ -189,7 +189,7 @@ void SaveHandler::think(Widelands::Game& game) {
 
 		verb_log_info_time(
 		   game.get_gametime(), "Autosave: save took %d ms\n", SDL_GetTicks() - realtime);
-		game.get_ibase()->log_message(_("Game saved"));
+        game.get_ibase()->log_message(_("Game saved"));
 	} else {
 		saving_next_tick_ = check_next_tick(game, realtime);
 	}

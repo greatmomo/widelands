@@ -798,6 +798,12 @@ bool WLApplication::handle_key(bool down, const SDL_Keycode& keycode, const int 
 					continue;
 				}
 				g_gr->screenshot(filename);
+
+                Widelands::Game game;
+                game.set_ibase(new InteractivePlayer(game, get_config_section(), 1, false));
+                game.get_ibase()->log_message(_("Screenshot saved"));
+
+
 				return true;
 			}
 			log_warn("Omitting screenshot because 10000 screenshots are already present");

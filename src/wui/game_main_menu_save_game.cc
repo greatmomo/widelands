@@ -278,7 +278,7 @@ bool GameMainMenuSaveGame::save_game(std::string filename, bool binary) {
 	if (error == GenericSaveHandler::Error::kSuccess ||
 	    error == GenericSaveHandler::Error::kDeletingBackupFailed) {
 		game.save_handler().set_current_filename(complete_filename);
-		igbase().log_message(_("Game saved"));
+        igbase().log_message(_("Game saved"));
 		return true;
 	}
 
