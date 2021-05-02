@@ -39,6 +39,8 @@
 
 #include "base/vector.h"
 
+class InteractiveGameBase;
+
 namespace UI {
 class Panel;
 }
@@ -189,6 +191,7 @@ struct WLApplication {
 
 private:
 	WLApplication(int argc, char const* const* argv);
+    InteractiveGameBase& igbase();
 
 	bool poll_event(SDL_Event&);
 
